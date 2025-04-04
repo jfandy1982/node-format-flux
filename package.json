@@ -2,12 +2,15 @@
   "name": "@jfandy1982/node-format-flux",
   "version": "0.0.0-SNAPSHOT",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "upgrade": "nx migrate latest --interactive",
+    "upgrade:doit": "npm install && nx migrate --run-migrations --if-exists"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@nx/js": "20.6.4",
-    "nx": "20.6.4"
+    "@nx/js": "20.7.1",
+    "nx": "20.7.1"
   },
   "workspaces": [
     "packages/*"
