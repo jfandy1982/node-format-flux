@@ -6,7 +6,7 @@
     "cleanup:all": "npm run cleanup:generated && npm run cleanup:deps && npm install",
     "cleanup:cache:nx": "rimraf ./.nx",
     "cleanup:deps": "rimraf ./package-lock.json && rimraf ./node_modules",
-    "cleanup:generated": "npm run cleanup:cache:nx && rimraf ./coverage && rimraf ./dist",    
+    "cleanup:generated": "npm run cleanup:cache:nx && rimraf ./coverage && rimraf ./dist",
     "format:affected": "nx format:write",
     "format:all": "nx format:write --all",
     "nx": "nx",
@@ -19,9 +19,13 @@
     "@nx/js": "20.7.1",
     "nx": "20.7.1",
     "prettier": "^3.0.0",
-    "rimraf": "^6.0.0"
+    "rimraf": "^6.0.0",
+    "verdaccio": "^6.0.0"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "nx": {
+    "includedScripts": []
+  }
 }
