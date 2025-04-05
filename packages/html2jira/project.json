@@ -1,0 +1,57 @@
+{
+  "name": "html2jira",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/html2jira/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build-esm": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/html2jira/esm",
+        "main": "packages/html2jira/src/index.ts",
+        "tsConfig": "packages/html2jira/tsconfig.esm.json",
+        "assets": ["packages/html2jira/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "build-cjs": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/html2jira/cjs",
+        "main": "packages/html2jira/src/index.ts",
+        "tsConfig": "packages/html2jira/tsconfig.cjs.json",
+        "assets": ["packages/html2jira/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npm run cleanup:dist",
+          "nx run html2jira:build-esm",
+          "nx run html2jira:build-cjs",
+          "npm run cleanup:tmp"
+        ],
+        "parallel": false
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

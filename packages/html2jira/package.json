@@ -1,0 +1,19 @@
+{
+  "name": "@jfandy1982/html2jira",
+  "version": "0.0.1",
+  "description": "A Node.js library to transform HTML documents to Jira markdown.",
+  "license": "MIT",
+  "author": "Andreas Ziegler",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfandy1982/node-format-flux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jfandy1982/node-format-flux/issues"
+  },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -2,13 +2,24 @@
   "name": "@jfandy1982/node-format-flux",
   "version": "0.0.0-SNAPSHOT",
   "license": "MIT",
+  "description": "A Node.js library for formatting flux data.",
+  "author": "Andreas Ziegler",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfandy1982/node-format-flux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jfandy1982/node-format-flux/issues"
+  },
+  "sideEffects": false,
   "scripts": {
+    "build:lib:html2jira": "nx build html2jira",
     "cleanup:all": "npm run cleanup:generated && npm run cleanup:deps && npm install",
     "cleanup:cache:nx": "rimraf ./.nx",
     "cleanup:deps": "rimraf ./package-lock.json && rimraf ./node_modules",
-    "cleanup:dist": "rimraf ./dist/lib",
+    "cleanup:dist": "npm run cleanup:tmp && rimraf ./dist/lib",
     "cleanup:generated": "npm run cleanup:cache:nx && npm run cleanup:dist && rimraf ./coverage",
-    "compile": "npm run cleanup:dist && nx run-many -t build --all && nx run-many -t build-es5 --all && rimraf ./tmp",
+    "cleanup:tmp": "rimraf ./tmp",
     "format:affected": "nx format:write",
     "format:all": "nx format:write --all",
     "nx": "nx",
