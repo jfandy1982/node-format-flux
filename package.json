@@ -17,7 +17,7 @@
     "cleanup:all": "npm run cleanup:generated && npm run cleanup:deps && npm install",
     "cleanup:cache:nx": "rimraf ./.nx",
     "cleanup:deps": "rimraf ./package-lock.json && rimraf ./node_modules",
-    "cleanup:dist": "npm run cleanup:tmp && rimraf ./dist/lib",
+    "cleanup:dist": "npm run cleanup:tmp && rimraf ./dist",
     "cleanup:generated": "npm run cleanup:cache:nx && npm run cleanup:dist && rimraf ./coverage",
     "cleanup:tmp": "rimraf ./tmp",
     "format:affected": "nx format:write",

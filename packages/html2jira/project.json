@@ -43,6 +43,7 @@
           "npm run cleanup:dist",
           "nx run html2jira:build-esm",
           "nx run html2jira:build-cjs",
+          "node tools/combine-builds.js html2jira",
           "npm run cleanup:tmp"
         ],
         "parallel": false

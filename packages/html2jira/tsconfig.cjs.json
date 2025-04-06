@@ -1,7 +1,6 @@
 {
-    "extends": "./tsconfig.lib.json",
-    "compilerOptions": {
-      "outDir": "./dist/html2jira/cjs",
-      "module": "commonjs",
-    }
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "module": "commonjs"
   }
+}

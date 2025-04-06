@@ -1,7 +1,4 @@
 {
-    "extends": "./tsconfig.lib.json",
-    "compilerOptions": {
-      "outDir": "./dist/html2jira/esm",
-      "module": "esnext",
-    },
-  }
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {}
+}
