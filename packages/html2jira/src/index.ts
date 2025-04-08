@@ -1,1 +1,1 @@
-export * from './lib/html2jira';
+export * from './lib/html2jira.js';

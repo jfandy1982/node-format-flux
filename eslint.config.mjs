@@ -30,4 +30,10 @@ export default [
     // Override or add rules here
     rules: {},
   },
+  {
+    files: ['**/*.spec.ts', '**/*.test.ts'],
+    rules: {
+      'no-console': 'off',
+    },
+  },
 ];

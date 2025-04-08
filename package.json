@@ -12,6 +12,10 @@
     "url": "https://github.com/jfandy1982/node-format-flux/issues"
   },
   "sideEffects": false,
+  "engines": {
+    "node": ">=22.14.0",
+    "npm": ">=10.9.2"
+  },
   "scripts": {
     "build:lib:html2jira": "nx build html2jira",
     "cleanup:all": "npm run cleanup:generated && npm run cleanup:deps && npm install",
@@ -34,9 +38,11 @@
     "@nx/eslint-plugin": "20.7.1",
     "@nx/jest": "20.7.1",
     "@nx/js": "20.7.1",
+    "@nx/rollup": "^20.7.1",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@swc/jest": "~0.2.36",
     "@types/jest": "^29.5.12",
     "@types/node": "18.16.9",
     "eslint": "^9.8.0",
@@ -47,6 +53,7 @@
     "nx": "20.7.1",
     "prettier": "^3.0.0",
     "rimraf": "^6.0.0",
+    "rollup": "^4.14.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tslib": "^2.3.0",
@@ -58,6 +65,16 @@
     "packages/*"
   ],
   "nx": {
-    "includedScripts": []
+    "includedScripts": [],
+    "targets": {
+      "local-registry": {
+        "executor": "@nx/js:verdaccio",
+        "options": {
+          "port": 4873,
+          "config": ".verdaccio/config.yml",
+          "storage": "tmp/local-registry/storage"
+        }
+      }
+    }
   }
 }
