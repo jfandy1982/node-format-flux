@@ -3,4 +3,4 @@ echo "Running git pre-commit hook"
 
 echo ""
 echo "Invoke lint-staged tasks..."
-#npx lint-staged --relative --concurrent false
+npx lint-staged --relative --concurrent false
