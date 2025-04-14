@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "dictionaries": ["docker", "en-common-misspellings", "fonts", "html", "html-symbol-entities", "npm", "software-tools", "typescript"],
+  "files": ["**/{*,.*}/**/*.*"],
+  "flagWords": [],
+  "ignorePaths": ["**/.git/**", "**/.vscode/**", ".cspell.json", ".gitignore", "dictionary-edc.txt", "package-lock.json"],
+  "ignoreWords": [],
+  "import": ["@cspell/dict-de-de/cspell-ext.json"],
+  "language": "en-US,de-DE",
+  "loadDefaultConfiguration": true,
+  "useGitignore": true,
+  "words": []
+}
