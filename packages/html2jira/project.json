@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "html2jira",
+  "projectType": "library",
+  "sourceRoot": "packages/html2jira/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "options": {
+        "main": "packages/html2jira/src/index.ts",
+        "outputPath": "packages/html2jira/dist",
+        "skipTypeCheck": true,
+        "stripLeadingPaths": true,
+        "tsConfig": "packages/html2jira/tsconfig.lib.json"
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  }
+}

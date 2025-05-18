@@ -1,0 +1,10 @@
+{
+  "compileOnSave": false,
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/html2jira"
+    }
+  ]
+}

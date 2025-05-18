@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@swc/helpers": "~0.5.11"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "development": "./src/index.ts",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "name": "@jfandy1982/html2jira",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.0.1"
+}
