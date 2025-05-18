@@ -1,4 +1,4 @@
-import { html2jira } from './html2jira';
+import { html2jira } from './html2jira.js';
 
 describe('html2jira', () => {
   it('should work', () => {
