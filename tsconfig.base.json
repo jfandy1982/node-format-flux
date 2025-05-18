@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
+    "customConditions": ["development"],
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "importHelpers": true,
@@ -15,7 +16,6 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2022",
-    "customConditions": ["development"]
+    "target": "es2022"
   }
 }
