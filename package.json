@@ -3,7 +3,9 @@
   "bugs": {
     "url": "https://github.com/jfandy1982/node-format-flux/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "html-dom-parser": "^5.1.1"
+  },
   "description": "A Node.js library for formatting flux data.",
   "devDependencies": {
     "@cspell/dict-de-de": "^4.0.0",
